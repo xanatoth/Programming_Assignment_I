@@ -47,7 +47,7 @@ int main() {
             throw "Invalid day for month of Feb.";
         }
         //checks that months with 31 days are valid
-        if(month ==1 || month == 3 &&  day > 31){
+        if(month ==1 || month == 3 || month == 5 || month == 7|| month == 8 || month == 10 || month == 12  &&  day > 31){
             throw "Invalid day entered!";
         }
         //checks that months with 30 days are valid
