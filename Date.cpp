@@ -1,52 +1,13 @@
 //Author: David Bommarito
 //Last Updated: Sept. 5, 2022
-//File Name: Date.ccp
+//File Name: Date.ccp, Date.h
 //Purpose: Create a date object and use a catch/throw block to catch exceptions
 
 #include <iostream>
-#include <string>
+#include "Date.h"
+
+
 using namespace std;
-
-class Date{
-private:
-    int Month;
-    int Day;
-    int Year;
-
-public:
-    //Accessors
-    int getMonth(){
-        return Month;
-    }
-    int getDay(){
-        return Day;
-    }
-    int getYear(){
-        return Year;
-    }
-    //Mutators
-    void setMonth(int month){
-        Month = month;
-    }
-    void setDay(int day){
-        Day = day;
-    }
-    void setYear(int year){
-        Year = year;
-    }
-    //Default Constructor
-    Date(){
-        Month = 1;
-        Day = 1;
-        Year = 1900;
-    }
-    //Parameterized Constructor
-    Date(int month, int day, int year){
-        Month = month;
-        Day = day;
-        Year = year;
-    }
-};
 
 int main() {
     int day, month, year;
@@ -66,40 +27,78 @@ int main() {
     //catch block for month
     catch (char const* txtException){
         cout << txtException;
+        cout << "Renter month: ";
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cin >> month;
+
 
     }
     cout << "\nEnter Day: ";
     //try block for Day
     try{
         cin >> day;
-        if(month == 2 && day >28){
+        //checks that day isn't negative 0 or negative
+        if(day < 1){
+            throw "Day has to be 1 or greater";
+        }
+        //checks that Feb. day is valid
+        if(month == 2 && day >28 ){
             throw "Invalid day for month of Feb.";
         }
-        if(day > 31 || day < 0){
-            throw "Invalid day!";
+        //checks that months with 31 days are valid
+        if(month ==1 || month == 3 &&  day > 31){
+            throw "Invalid day entered!";
+        }
+        //checks that months with 30 days are valid
+        if(month == 4 || month == 6 || month == 9 || month == 11 && day > 30){
+            throw "Invalid day entered!";
         }
     }
-    //catch block for day
+    //catch block for days
     catch (char const* txtException){
         cout << txtException;
+        cout << "\nReenter day: ";
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cin >> day;
     }
 
     cout << "\nEnter Year:";
-    //try block year
+    //try block years
     try{
         cin >> year;
         if(year > 2022 || year < 1900){
             throw "Invalid year!";
         }
     }
-    //catch block for year
+    //catch block for years
     catch (char const* txtException){
         cout << txtException;
+        cout << "\nReenter year: ";
+        cin.clear();
+        cin.ignore(1000,'\n');
+        cin >> year;
     }
 
     //instantiates Date object
     Date myDate(month,day,year);
 
-    cout << "Month: " << myDate.getMonth() << "\nDay: " << myDate.getDay() << "\nYear: " << myDate.getYear();
+    //this needs to be converted to a string
+    switch (month) {
+        case 1: cout << "January " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 2: cout << "February " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 3: cout << "March " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 4: cout << "April " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 5: cout << "May " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 6: cout << "June " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 7: cout << "July " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 8: cout << "August " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 9: cout << "September " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 10: cout << "October " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 11: cout << "November " << myDate.getDay() << ", " << myDate.getYear() << endl;
+        case 12: cout << "December " << myDate.getDay() << ", " << myDate.getYear() << endl;
+
+    }
     return 0;
 }
