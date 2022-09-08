@@ -1,11 +1,10 @@
 //
 // Created by David Bommarito on 9/6/22.
 //
+//
 
-#ifndef PROGRAMMING_ASSIGNMENT_I_DATE_H
 #define PROGRAMMING_ASSIGNMENT_I_DATE_H
 
-#endif //PROGRAMMING_ASSIGNMENT_I_DATE_H
 using namespace std;
 class Date{
 private:
@@ -14,17 +13,16 @@ private:
     int Year;
 
 public:
-    //Accessors
-    int getMonth(){
-        return Month;
+    //Mutators
+    int getYear(){
+        return Year;
     }
     int getDay(){
         return Day;
     }
-    int getYear(){
-        return Year;
-    }
-    //Mutators
+    int getMonth(){
+        return Month;
+    };
     void setMonth(int& month){
         try{
             if(!cin.good()){
@@ -44,10 +42,9 @@ public:
             cin.ignore(1000,'\n');
             cin >> month;
             setMonth(month);
-
-
         }
     }
+
     void setDay(int& day, int& month){
         try{
             //checks that day isn't negative 0 or negative
@@ -75,6 +72,7 @@ public:
             cin.clear();
             cin.ignore(1000,'\n');
             cin >> day;
+            setDay(day,month);
         }
     }
     void setYear(int& year){
@@ -91,6 +89,7 @@ public:
             cin.clear();
             cin.ignore(1000,'\n');
             cin >> year;
+            setYear(year);
         }
 
     }

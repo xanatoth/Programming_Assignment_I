@@ -22,6 +22,7 @@ int main() {
     myDate.setDay(day,month);
     cout << "Enter Year: ";
     cin >> year;
+
     myDate.setYear(year);
 
     switch (month) {
