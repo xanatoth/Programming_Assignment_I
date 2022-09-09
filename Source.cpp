@@ -1,12 +1,12 @@
 //Author: David Bommarito
-//Last Updated: Sept. 5, 2022
+//Last Updated: Sept. 8, 2022
 //File Name: Date.ccp, Date.h
 //Purpose: Create a date object and use a catch/throw block to catch exceptions
 
 #include <iostream>
 #include "Date.h"
 using namespace Dates;
-void toString(); //TODO need to create method that converts output to a strin
+void toString(); //TODO need to create method that converts output to a string
 
 using namespace std;
 int day, month, year;
