@@ -1,3 +1,0 @@
-/Users/davidbommarito/Library/Mobile Documents/com~apple~CloudDocs/School Stuff/CSCI Stuff/CSCI II/Module 2/Programming Assignment I/cmake-build-debug/CMakeFiles/Programming_Assignment_I.dir
-/Users/davidbommarito/Library/Mobile Documents/com~apple~CloudDocs/School Stuff/CSCI Stuff/CSCI II/Module 2/Programming Assignment I/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/davidbommarito/Library/Mobile Documents/com~apple~CloudDocs/School Stuff/CSCI Stuff/CSCI II/Module 2/Programming Assignment I/cmake-build-debug/CMakeFiles/rebuild_cache.dir
