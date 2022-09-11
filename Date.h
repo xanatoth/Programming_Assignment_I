@@ -19,13 +19,10 @@ namespace Dates {
             int getDay();
             int getMonth();
             void setMonth(int& month);
-            void setDay(int& day, int& month);
+            void setDay(int& day, int month);
             void setYear(int& year);
+            //Default Constructor //TODO ADD CONSTRUCTOR
 
-            //Default Constructor
-            Date();
-            //Parameterized Constructor
-            Date(int month, int day, int year);
         };
     };
 

@@ -6,14 +6,13 @@
 #include <iostream>
 #include "Date.h"
 using namespace Dates;
-void toString(); //TODO need to create method that converts output to a string
-
+void toString(Date&); //TODO need to create method that converts output to a string
+void changeInterface(Date& dayt);
 using namespace std;
 int day, month, year;
 int main() {
 
     Date myDate;
-
 
     cout << "Enter all values as integers" << endl;
     cout << "Enter Month: ";
@@ -25,36 +24,9 @@ int main() {
     cout << "Enter Year: ";
     cin >> year;
     myDate.setYear(year);
+    toString(myDate);
+    changeInterface(myDate);
 
-
-
-    switch (month) {
-        case 1: cout << "January " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 2: cout << "February " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 3: cout << "March " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 4: cout << "April " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 5: cout << "May " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 6: cout << "June " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 7: cout << "July " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 8: cout << "August " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 9: cout << "September " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 10: cout << "October " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 11: cout << "November " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-        case 12: cout << "December " << myDate.getDay() << ", " << myDate.getYear() << endl;
-        break;
-
-    }
     return 0;
 }
 
