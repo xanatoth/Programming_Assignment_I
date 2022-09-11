@@ -5,17 +5,12 @@
 #include "Date.h"
 using namespace std;
 using namespace Dates;
+    //Accessors
+    int Date::getYear() const{return Year;}
+    int Date::getDay() const{return Day;}
+    int Date::getMonth() const{return Month;};
+
     //Mutators
-    int Date::getYear(){
-        return Year;
-    }
-    int Date::getDay(){
-        return Day;
-    }
-    //might not need this
-    int Date::getMonth(){
-        return Month;
-    };
     void Date::setMonth(int& month){
         try{
             if(!cin.good()){
@@ -153,10 +148,21 @@ using namespace Dates;
                     case 5:
                         cout << "Goodbye!";
                         exit(0);
+                    default:
+                        cout << "Invalid option";
+                        cin.clear();
+                        cin.ignore(1000,'\n');
+                        break;
                 }//end of switch
             }// end of while
         }//end of function
 
+        //Constructor
+        Date::Date(){
+        Month = 1;
+        Day = 1;
+        Year = 1900;
+    }
 
 
 

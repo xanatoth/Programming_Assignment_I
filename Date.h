@@ -15,15 +15,17 @@ namespace Dates {
 
         public:
             //Mutators
-            int getYear();
-            int getDay();
-            int getMonth();
+            int getYear() const;
+            int getDay() const;
+            int getMonth() const;
             void setMonth(int& month);
             void setDay(int& day, int month);
             void setYear(int& year);
-            //Default Constructor //TODO ADD CONSTRUCTOR
+            //Default Constructor
+            Date();
+
 
         };
-    };
+    }
 
 #endif //PROGRAMMING_ASSIGNMENT_I_DATE_H
