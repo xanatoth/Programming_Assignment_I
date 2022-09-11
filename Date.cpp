@@ -68,6 +68,8 @@ using namespace Dates;
             setDay(day,month);
         }
     }
+
+    //set year try/catch block
     void Date::setYear(int& year){
         try{
             if(year > 2020 || year < 1900){
@@ -85,7 +87,7 @@ using namespace Dates;
             setYear(year);
         }
     }
-
+    //switch case that prints "Month Day, Year" to console as a string
     void toString(Date& dayt){
         switch (dayt.getMonth()) {
             case 1: cout << "January " <<  to_string(dayt.getDay())<< ", " << to_string(dayt.getYear());
